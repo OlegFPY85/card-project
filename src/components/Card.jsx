@@ -1,6 +1,6 @@
-function Card({ imageUrl, title, text, buttonText }) {
+function Card({ imageUrl, title, children }) {
   return (
-    <div className="card">
+    <div className="card h-100 d-flex flex-column">
       {imageUrl && (
         <img 
           src={imageUrl} 
@@ -8,10 +8,11 @@ function Card({ imageUrl, title, text, buttonText }) {
           alt={title}
         />
       )}
-      <div className="card-body">
+      <div className="card-body d-flex flex-column">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text">{text}</p>
-        <a href="#" className="btn btn-primary">{buttonText}</a>
+        <div className="card-text flex-grow-1">
+          {children}
+        </div>
       </div>
     </div>
   )

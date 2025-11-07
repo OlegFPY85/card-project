@@ -1,5 +1,4 @@
 import Card from './components/Card'
-import './App.css'
 
 function App() {
   return (
@@ -7,19 +6,21 @@ function App() {
       <div className="row">
         <div className="col-md-6 mb-4">
           <Card 
-            imageUrl="https://via.placeholder.com/318x180?text=Image+cap" 
-            title="Card title"
-            text="Some quick example text to build on the card title and make up the bulk of the card's content."
-            buttonText="Go somewhere"
-          />
+            imageUrl="https://via.placeholder.com/318x180?text=Изображение" 
+            title="Название карточки"
+          >
+            <p className="card-text">Небольшой пример текста, который дополняет заголовок карточки и составляет основную часть её содержания.</p>
+            <a href="#" className="btn btn-primary mt-auto">Пойти куда-нибудь</a>
+          </Card>
         </div>
         
         <div className="col-md-6 mb-4">
           <Card 
-            title="Special title treatment"
-            text="With supporting text below as a natural lead-in to additional content."
-            buttonText="Go somewhere"
-          />
+            title="Дополнительные возможности"
+          >
+            <p className="card-text">С пояснительным текстом внизу в качестве естественного перехода к дополнительному контенту.</p>
+            <a href="#" className="btn btn-primary mt-auto">Пойти куда-нибудь</a>
+          </Card>
         </div>
       </div>
     </div>
